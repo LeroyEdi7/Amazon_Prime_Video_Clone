@@ -72,19 +72,20 @@ Open index.html in your browser
 (or use Live Server if using VS Code)
 
 ## 🎯 What I Learned
-Building responsive layouts using CSS Grid & Flexbox
-Handling dropdowns and popups with pure JavaScript
-Fixing layout issues caused by browser zoom
-Structuring scalable front-end CSS
-Designing UI similar to a real-world production site
+- Building responsive layouts using CSS Grid & Flexbox
+- Handling dropdowns and popups with pure JavaScript
+- Fixing layout issues caused by browser zoom
+- Structuring scalable front-end CSS
+- Designing UI similar to a real-world production site
 
 ## 🧩 Future Improvements
-Hamburger menu for mobile navigation
-Accessibility improvements (ARIA roles, keyboard navigation)
-Dark/light theme toggle
-Dynamic data loading (API-based channels)
-Performance optimization📌 Disclaimer
+- Hamburger menu for mobile navigation
+- Accessibility improvements (ARIA roles, keyboard navigation)
+- Dark/light theme toggle
+- Dynamic data loading (API-based channels)
+- Performance optimization📌 Disclaimer
 
+## NOTE 
 This project is built for educational purposes only.
 All trademarks, logos, and brand names belong to Amazon.
 
