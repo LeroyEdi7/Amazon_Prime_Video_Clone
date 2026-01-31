@@ -18,6 +18,9 @@ body,main,footer,p,h1,ul,li {
   padding: 0px;
   margin: 0px;
 }
+body{
+    background-color: #000000;
+}
 
 ul {
   list-style: none;
@@ -570,7 +573,7 @@ a {
 #channels h1 {
   font-size: 55px;
   font-family: "Lato", arial;
-  color: #000000;
+  color: white;
   font-weight: 300;
   padding-top: 80px;
 }
@@ -580,7 +583,7 @@ a {
   font-size: 28px;
   font-family: "Lato", arial;
   font-weight: 300;
-  color: #141414;
+  color: #d3cfcf;
 }
 
 .channels-section {
@@ -671,44 +674,11 @@ a {
   height: 600px;
 }
 
-.svg-amazon {
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.svg-amazon > div {
-  max-width: 320px;
-}
-
-.svg-amazon .svg {
-  width: 300px;
-  height: 300px;
-}
-
-.svg-amazon h2 {
-  font-size: 35px;
-  font-family: "Lato", arial;
-  font-weight: 500;
-  color: #141414;
-}
-
-.svg-amazon p {
-  font-size: 22px;
-  font-family: "Lato", arial;
-  font-weight: 300;
-}
-
 footer {
   text-align: center;
   background-color: #131414;
   width: 100%;
   padding: 30px 5vw;
-  margin-top: 40px;
 }
 
 footer img {
