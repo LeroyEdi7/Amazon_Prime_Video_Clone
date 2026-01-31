@@ -1,4 +1,4 @@
-// Smooth Scroll
+
 function smoothScroll() {
     const internLinks = document.querySelectorAll('.js-scroll a[href^="#"]');
     
@@ -16,10 +16,7 @@ function smoothScroll() {
         
     }
     smoothScroll();
-    
-        
-    
-    // Effect Hover - Top Categories
+
     const aEffect = document.querySelector(".a-effect");
     const navMenu = document.querySelector(".categories-section");
     
@@ -30,9 +27,6 @@ function smoothScroll() {
     
     hooverCategories();
         
-        
-        
-    // Effect Click - Languages Section
     const liEffect = document.querySelector(".l-acronyms");
     const languageMenu = document.querySelector(".languages-section");
     const shadowModal = document.querySelector(".modal-container");
@@ -48,10 +42,6 @@ function smoothScroll() {
         })
     }
     clickLanguage();
-    
-        
-    // Effect Click - Search Section
-        // Search bar toggle
     const searchWrapper = document.querySelector(".search-wrapper");
     const searchIcon = document.querySelector(".search-icon");
     const searchInput = document.querySelector(".search-input");
@@ -60,15 +50,12 @@ function smoothScroll() {
         searchWrapper.classList.toggle("active");
         searchInput.focus();
     });
-
-    // Close search when clicking outside
     document.addEventListener("click", (e) => {
         if (!searchWrapper.contains(e.target)) {
             searchWrapper.classList.remove("active");
         }
     });
   
-    // Effect Click - Acc Section
     const accEffect = document.querySelector(".acc-effect");
     const accMenu = document.querySelector(".menu-acc")
     
