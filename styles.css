@@ -136,36 +136,34 @@ a {
 }
 
 .languages-section #menu-l {
+  position: fixed;
+  top: 80px;
+  right: 40px;
+  width: 480px;
+  max-width: 90vw;
+  max-height: 70vh;
+  overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 611px;
-  height: 644px;
   background-color: #27323d;
-  bottom: 26.5%;
-  left: 62.4%;
-  list-style: none;
-  flex-wrap: wrap;
-  border-radius: 4px;
-  box-shadow: 0 0 0.5em black;
-  cursor: pointer;
-  position: fixed;
-  z-index: 4;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 6;
 }
 
 .languages-section #menu-l li {
-  display: block;
-  list-style: none;
-  font-family: Lato;
-  font-size: 18px;
+  font-family: "Lato";
+  font-size: 16px;
   font-weight: 400;
   color: #c4cacf;
-  padding: 20px 46px 10px 44px;
+  padding: 12px 16px;
 }
 
 .languages-section #menu-l .tab-nav1,
 .languages-section #menu-l .tab-nav2 {
-  border-right: 1px solid #000;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .languages-section #menu-l li:hover {
   transition: 0.8s;
@@ -180,6 +178,14 @@ a {
   content: "✓";
   margin-right: 8px;
 }
+@media (max-width: 768px) {
+  .languages-section #menu-l {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90vw;
+    right: 5vw;
+  }
+}
+
 
 .hover-effect {
   display: none !important;
@@ -189,7 +195,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 400px;
+  height: 350px;
   background: #122739;
   background: linear-gradient(163deg, #122739 23%, #0c1c2a 48%);
   color: white;
@@ -279,7 +285,7 @@ a {
 .categories-section .divider {
   margin-left: 50px;
   width: 1px;
-  height: 340px;
+  height: 300px;
   background-color: white;
 }
 
@@ -532,7 +538,7 @@ footer {
   text-align: center;
   background-color: #131414;
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   margin-top: 25px;
 }
 
