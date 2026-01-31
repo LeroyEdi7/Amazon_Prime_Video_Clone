@@ -50,7 +50,24 @@ function smoothScroll() {
     clickLanguage();
     
         
-        
+    // Effect Click - Search Section
+        // Search bar toggle
+    const searchWrapper = document.querySelector(".search-wrapper");
+    const searchIcon = document.querySelector(".search-icon");
+    const searchInput = document.querySelector(".search-input");
+
+    searchIcon.addEventListener("click", () => {
+        searchWrapper.classList.toggle("active");
+        searchInput.focus();
+    });
+
+    // Close search when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!searchWrapper.contains(e.target)) {
+            searchWrapper.classList.remove("active");
+        }
+    });
+  
     // Effect Click - Acc Section
     const accEffect = document.querySelector(".acc-effect");
     const accMenu = document.querySelector(".menu-acc")
