@@ -73,6 +73,42 @@ function smoothScroll() {
     
     accClick();
     
+    // ================= THEME TOGGLE =================
+
+const themeToggleBtn = document.getElementById("theme-toggle");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+
+    document.body.classList.add("light-theme");
+    themeToggleBtn.textContent = "☀️";
+
+} else {
+
+    themeToggleBtn.textContent = "🌙";
+
+}
+
+
+    // Toggle theme on click
+    themeToggleBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("light-theme");
+
+        if (document.body.classList.contains("light-theme")) {
+
+            localStorage.setItem("theme", "light");
+            themeToggleBtn.textContent = "☀️";
+
+        } else {
+
+            localStorage.setItem("theme", "dark");
+            themeToggleBtn.textContent = "🌙";
+
+        }
+
+    });
+
     // Close Menus
     const selectMain = document.querySelector("#all");
     
@@ -86,3 +122,70 @@ function smoothScroll() {
         })
     }
     closeMenus();    
+    // ================= CONTACT FORM HANDLING =================
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Basic validation
+    if(name === "" || email === "" || message === "") {
+
+        formStatus.textContent = "Please fill all fields.";
+        formStatus.style.color = "red";
+        return;
+
+    }
+
+    // Email validation
+    if(!validateEmail(email)) {
+
+        formStatus.textContent = "Please enter valid email.";
+        formStatus.style.color = "red";
+        return;
+
+    }
+
+    // Success
+    showCustomAlert();
+
+
+    contactForm.reset();
+
+});
+// ================= CUSTOM ALERT FUNCTION =================
+
+const customAlert = document.getElementById("custom-alert");
+const alertClose = document.querySelector(".alert-close");
+
+function showCustomAlert() {
+
+    customAlert.classList.add("show");
+
+    // Auto hide after 4 seconds
+    setTimeout(() => {
+        customAlert.classList.remove("show");
+    }, 4000);
+
+}
+
+// Close button
+alertClose.addEventListener("click", () => {
+    customAlert.classList.remove("show");
+});
+
+
+// Email validation function
+function validateEmail(email) {
+
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+
+}

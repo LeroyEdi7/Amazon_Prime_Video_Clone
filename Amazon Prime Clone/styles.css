@@ -20,6 +20,7 @@ body,main,footer,p,h1,ul,li {
 }
 body{
     background-color: #000000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 ul {
@@ -85,6 +86,64 @@ a {
   .search-wrapper.active .search-input {
     width: 200px;
   }
+}
+
+/* ================= THEME TOGGLE BUTTON ================= */
+
+.theme-toggle-btn {
+    width: 45px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #0F79AF;
+    color: white;
+    transition: 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #1a9ada;
+}
+
+
+/* ================= LIGHT THEME ================= */
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #111;
+}
+
+body.light-theme #showcase {
+    background-color: #ffffff;
+}
+
+body.light-theme .left-list a,
+body.light-theme .right-list a {
+    color: #111;
+}
+
+body.light-theme #main,
+body.light-theme #contact-section,
+body.light-theme #popcorn {
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+body.light-theme footer {
+    background-color: #eaeaea;
+}
+
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+}
+
+body.light-theme .alert-box {
+    background-color: white;
+    color: black;
 }
 
 .left-list {
@@ -672,6 +731,142 @@ a {
   margin-left: 100px;
   width: 650px;
   height: 600px;
+}
+
+#contact-section {
+    background-color: #0D0D0D;
+    padding: 80px 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #E1E1E1;
+    font-family: "Lato";
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: #777;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:valid + label,
+.form-group textarea:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: #0F79AF;
+}
+
+.contact-btn {
+    width: 100%;
+    height: 50px;
+    background-color: #0F79AF;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #1a9ada;
+}
+
+#form-status {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #0F79AF;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    width: 320px;
+    z-index: 9999;
+    transition: right 0.5s ease;
+}
+
+.custom-alert.show {
+    right: 20px;
+}
+
+.alert-box {
+    background: #1a1a1a;
+    border-left: 5px solid #0F79AF;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    color: white;
+    font-family: "Lato";
+}
+
+.alert-icon {
+    font-size: 22px;
+    color: #0F79AF;
+}
+
+.alert-content h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.alert-content p {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.alert-close {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.alert-close:hover {
+    color: white;
 }
 
 footer {

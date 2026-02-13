@@ -40,6 +40,11 @@
                     style="margin-left: 5px; margin-bottom: 2px;"></li>
             <li class="acc-effect"><img src="./svgs/Acc.svg" style="width: 25px;"><img src="./svgs/Arrow-Down.svg"
                     style="margin-bottom: 6px;"></li> 
+            <li>
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    🌙
+                </button>
+            </li>
             <button class="small-button">Join Prime</button>
         </ul>
     </header>
@@ -222,6 +227,47 @@
                 <button class="large-button">Rent movies</button>
             </div>
         </section>
+        <!-- Contact Form Section -->
+        <section id="contact-section">
+            <div class="contact-container">
+
+                <h2>Contact Us</h2>
+                <p>Have questions? Send us a message.</p>
+
+                <form id="contact-form">
+
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+
+                    <button type="submit" class="contact-btn">Send Message</button>
+
+                    <p id="form-status"></p>
+
+                </form>
+            </div>
+        </section>
+        <div id="custom-alert" class="custom-alert">
+            <div class="alert-box">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for contacting us. We'll get back to you soon.</p>
+                </div>
+                <span class="alert-close">&times;</span>
+            </div>
+        </div>
         <footer>
             <ul class="js-scroll">
                 <li><a href="#main" class="js-scroll"><img class="js-scroll img-footer" src="./svgs/AmazonLogo2.svg"></a></li>
